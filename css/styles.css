@@ -1,0 +1,98 @@
+/* Reset and Global Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  background: linear-gradient(-45deg, #ff9a9e, #fad0c4, #fbc2eb, #a6c1ee);
+  background-size: 400% 400%;
+  animation: gradient-animation 15s ease infinite;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Neon Glow Effect */
+.neon-text {
+  font-size: 3rem;
+  font-weight: bold;
+  color: #fff;
+  text-shadow: 0 0 5px #0ff, 0 0 10px #0ff, 0 0 20px #0ff, 0 0 40px #0ff, 0 0 80px #0ff;
+  animation: neon-glow 1.5s infinite alternate;
+}
+
+@keyframes neon-glow {
+  from {
+    text-shadow: 0 0 5px #0ff, 0 0 10px #0ff;
+  }
+  to {
+    text-shadow: 0 0 20px #0ff, 0 0 40px #0ff;
+  }
+}
+
+/* Glassmorphism Effect */
+.glass-effect {
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  border-radius: 10px;
+}
+
+/* Buttons */
+.btn-hover {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.btn-hover:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Parallax Section */
+#parallax-section {
+  height: 500px;
+  overflow: hidden;
+}
+
+#parallax-container {
+  position: absolute;
+}
+
+.parallax-layer {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+/* Chart Styles */
+canvas {
+  max-width: 800px;
+  margin: 20px auto;
+}
+
+/* Back-to-Top Button */
+#back-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  padding: 10px 15px;
+  background: #333;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+#back-to-top.hidden {
+  visibility: hidden;
+  opacity: 0;
+}
+
+#back-to-top.visible {
+  visibility: visible;
+  opacity: 1;
+}
